@@ -59,6 +59,7 @@ def show_image_and_label(image: torch.Tensor, label: dict)->torch.Tensor:
 
   result : [C,H,W], dtype: Tensor
   '''
+  
   number_of_object = len(label['annotation']['object'])
   boxes = []
   names = []
