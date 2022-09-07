@@ -1,7 +1,8 @@
 import torch
 import numpy as np
-import matplotlib.pyplot asPplt
+import matplotlib.pyplot as plt
 
+from torchvision.utils import draw_bounding_boxes
 import torchvision.transforms.functional as F
 # torchvision.transforms.functional.convert_image_dtype
 
@@ -18,7 +19,7 @@ def show(imgs):
         axs[0, i].imshow(np.asarray(img))
         axs[0, i].set(xticklabels=[], yticklabels=[], xticks=[], yticks=[])
 
-from torchvision.utils import draw_bounding_boxes
+
 
 def show_image_and_label(image: torch.Tensor, label: dict)->torch.Tensor:
   '''
